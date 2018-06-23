@@ -1,0 +1,1 @@
+cron is the command that regularly checks crontabs to see if there is a process that should be started that minute
