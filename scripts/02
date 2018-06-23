@@ -1,0 +1,10 @@
+#!/bin/bash
+
+apt-get update >> /var/log/update_script.log
+apt-get upgrade -y >> /var/log/update_script.log
+
+# You can use the crontab with the -e option to edit the crontab for the current user.
+# The format for a crontab line is as such:
+# minute, hour, day of month, month, day of week, and then your command.
+# In this case...
+# 0 4 * * 3 (path to this executable)

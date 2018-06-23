@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(md5sum /etc/crontab)" != "$(cat /etc/crontabHASH)" ]
+then
+	echo "/etc/crontab has been modified!" | mail -s "crontab warning" root
+fi
+
+md5sum /etc/crontab > /etc/crontabHASH
